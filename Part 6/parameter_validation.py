@@ -1,0 +1,29 @@
+# Write your solution here
+def new_person(name,age):
+    # while True:
+        
+        # try:
+            # number = int(input(string))
+    if name =="":
+        raise ValueError("The string is emtpy")
+    if name.find(" ")== -1: 
+        raise ValueError("The string contains less than two words")
+    if len(name)> 40: 
+        raise ValueError("The string  is longer than 40 characters")
+    if age < 0: 
+        raise ValueError("The age is a negative number")
+    if age > 150:
+        raise ValueError("The age is greater than 150")
+            
+
+    try:
+        person = (name,age)
+        return person
+    except ValueError:
+        pass
+
+    
+if __name__ == "__main__":
+    per = new_person("Stelios hg8", 25)
+    print(per)
+    
