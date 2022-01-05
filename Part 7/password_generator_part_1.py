@@ -1,14 +1,13 @@
 # Write your solution here
-from random import sample
-
-def lottery_numbers(amount,lower,upper):
-  
-    number_pool = list(range(lower, upper))
-    weekly_draw = sample(number_pool, amount)
-    print(weekly_draw)
-    weekly_draw.sort()
-    return weekly_draw
+import random
+import string
+def generate_password(length):
+    passw =''
+    for i in range(length):
+        x =random.choice(string.ascii_lowercase)
+        passw+=str(x)
+    return passw
 
 if __name__ == "__main__":
-    for number in lottery_numbers(7, 1, 40):
-        print(number)
+    for i in range(10):
+        print(generate_password(8))
