@@ -1,4 +1,11 @@
 # Write your solution here
+def mean(nums):
+    sum=0
+    for num in nums:
+        sum+=num
+    
+    mean=sum/len(nums)
+    return mean
 # You can test your function by calling it within the following block
 if __name__ == "__main__":
     my_list = [3, 6, -4]
